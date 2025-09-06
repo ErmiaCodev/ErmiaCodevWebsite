@@ -1,0 +1,40 @@
+---
+import config from "../config/config.json"
+
+const navLinks = config.navLinks;
+
+---
+
+<header x-data="{open: false}" class="sticky top-0 left-0 right-0 bg-white shadow">
+    <div class="container mx-auto px-6 flex justify-between font-fa flex-wrap xl:flex-nowrap ">
+        <div class="py-5">
+            <h2 class="text-xl font-medium">Ermia Codev</h2>
+        </div>
+        <div class="hidden xl:flex gap-4 items-center">
+            {
+                navLinks.map(e => <a class="nav-link" href={e.link}>{e.title}</a>)
+            }
+        </div>
+        <div class="hidden xl:flex items-center gap-3 font-sans font-medium">
+            <a referrerpolicy="no-referrer" target="_blank" class="text-white bg-cyan-600 px-2 py-2 rounded shadow" href={config.links.linkedIn}>
+                LinkedIn
+            </a>
+            <a referrerpolicy="no-referrer" target="_blank" class="text-white bg-purple-900 px-2 py-2 rounded shadow" href={config.links.github}>
+                Gitub
+            </a>
+        </div>
+        <div class="xl:hidden flex items-center">
+            <button x-on:click="open = !open" class="cursor-pointer p-1 hover:bg-gray-200 rounded-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="w-full pb-2 flex xl:hidden flex-col">
+            {
+                navLinks.map(e => <a class="nav-mlink" href={e.link}>{e.title}</a>)
+            }
+        </div>
+    </div>
+</header>
+

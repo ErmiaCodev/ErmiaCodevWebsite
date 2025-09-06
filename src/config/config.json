@@ -1,0 +1,22 @@
+{
+    "links": {
+        "github": "https://github.com/ErmiaMoghadamy",
+        "github2": "https://github.com/ErmiaCodev",
+        "linkedIn": "",
+        "pWebsite": ""
+    },
+    "faNavLinks": [
+        { "title": "خانه", "link": "/Fa/" },
+        { "title": "پست ها", "link": "#" },
+        { "title": "دوره ها", "link": "#" },
+        { "title": "درباره من", "link": "#" },
+        { "title": "English", "link": "/" }
+    ],
+    "navLinks": [
+        { "title": "Home", "link": "/" },
+        { "title": "Posts", "link": "#" },
+        { "title": "Courses", "link": "#" },
+        { "title": "About Me", "link": "#" },
+        { "title": "فارسی", "link": "/Fa/" }
+    ]
+}
