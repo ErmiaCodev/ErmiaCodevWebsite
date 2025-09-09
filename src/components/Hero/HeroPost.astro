@@ -1,0 +1,35 @@
+---
+import uiConfig from "../../config/ui.json";
+
+interface Props {
+    title: string;
+    link?: string;
+    banner: string;
+    category: "tech" | "personal" | "tutorial";
+}
+
+const { title, link, category, banner } = Astro.props;
+
+const cat = uiConfig.categories[category];
+---
+
+<a
+    target={link ? "_blank" : "_self"}
+    href={link ?? "#"}
+    class="block w-full lg:w-1/2 bg-white rounded-xl shadow-xs hover:shadow-sm px-4 py-4"
+>
+    <div class="flex gap-4 items-center">
+        <img class="w-64 h-auto aspect-video object-cover" src={banner} alt="" />
+        <div>
+            <div
+                class={`inline-flex ${cat.scheme} font-medium text-sm py-1 px-3 rounded-full mb-4`}
+            >
+                {cat.title}
+            </div>
+            <h2 class="font-semibold text-custom-lg text-dark mb-3">{title}</h2>
+            <div class="font-mono">
+                ZT, by <strong class="underline">Ermia Codev</strong>
+            </div>
+        </div>
+    </div>
+</a>

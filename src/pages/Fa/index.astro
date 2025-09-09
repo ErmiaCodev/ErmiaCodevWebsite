@@ -1,105 +1,35 @@
 ---
-import FaLayout from '../../layouts/FaLayout.astro';
-
+import HeroMain from "../../components/Hero/HeroMain.astro";
+import HeroPost from "../../components/Hero/HeroPost.astro";
+import FaLayout from "../../layouts/FaLayout.astro";
 ---
 
-<FaLayout title="Ermia Codev" keywrd="Ermia,Codev,ErmiaCodev,Code,Dev,Linux,DevOps,ارمیا,مقدمی">
-        <div class="mt-12 mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0 relative z-1 font-fa">
-          <div class="flex flex-wrap gap-x-7.5 gap-y-9">
-            <!-- Hero item -->
-            <div class="max-w-[1170px] w-full flex flex-col lg:flex-row lg:items-center gap-7 lg:gap-11 bg-white shadow-xs hover:shadow-sm rounded-xl p-4 lg:p-2.5">
-              <div class="lg:max-w-[536px] w-full">
-                <a href="/">
-                  <img class="w-full max-h-72 object-cover rounded-xl" src="/img/GeekyChunk.jpg" alt="hero">
-                </a>
-              </div>
-
-              <div class="lg:max-w-[540px] w-full">
-                <a href="" class="inline-flex text-purple-800 bg-purple-200 font-medium text-sm py-1 px-3 rounded-full mb-4">
-                    شخصی
-                </a>
-                <h1 class="font-bold text-custom-4 xl:text-2xl text-dark mb-4">
-                  <a href="/">
-                    ارمیا مقدمی (Ermia Codev)
-                  </a>
-                </h1>
-                <p class="max-w-[524px] text-[#5c6a78]">
-                  ارمیا مقدمی هستم برنامه نویش فول استک وب, دیتا ساینتیست, دوآپس و مدرس رسمی فنی حرفه ای
-                </p>
-                <div class="flex items-center gap-2 mt-5 font-mono">
-                  <a href="author.html" class="flex items-center gap-3">
-                    <div class="flex w-8 h-8 rounded-full overflow-hidden">
-                      <img src="/img/Ermia-Moghadamy.png" alt="user">
-                    </div>
-                    <p class="text-sm">Ermia Codev</p>
-                  </a>
-
-                  <span class="flex w-[3px] h-[3px] rounded-full bg-slate-800"></span>
-
-                  <p class="text-sm">Sep 6, 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hero item -->
-            <div class="lg:max-w-[570px] w-full flex flex-col sm:flex-row sm:items-center gap-6 bg-white shadow-xs hover:shadow-sm rounded-xl p-2.5">
-              <div class="lg:max-w-[238px] w-full">
-                <a href="blog-single.html">
-                  <img class="w-full h-48 object-cover" src="/img/banners/fc.png" alt="hero">
-                </a>
-              </div>
-
-              <div class="lg:max-w-[272px] w-full">
-                <a href="category.html" class="inline-flex text-blue-800 bg-blue-200 font-medium text-sm py-1 px-3 rounded-full mb-4">
-                    تکنولوژی
-                </a>
-                <h2 class="font-semibold text-custom-lg text-dark mb-3">
-                  <a href="blog-single.html">
-                    تمرکزیار: برنامه بومی دستیار تمرکز <br />
-                    بومی سازی تایمر فارست بهمراه قابلیت های متعدد.
-                  </a>
-                </h2>
-                <div class="flex items-center gap-2.5 font-mono">
-                  <p class="text-sm">
-                    <a href="">توسط Ermia Codev</a>
-                  </p>
-
-                  <span class="flex w-[3px] h-[3px] rounded-full bg-dark-2"></span>
-
-                  <p class="text-sm">May 20, 2024</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hero item -->
-            <div class="lg:max-w-[570px] w-full flex flex-col sm:flex-row sm:items-center gap-6 bg-white shadow-xs hover:shadow-sm rounded-xl p-2.5">
-              <div class="lg:max-w-[238px] w-full">
-                <a href="blog-single.html">
-                  <img class="w-full object-center bg-black bg-blend-overlay" src="/img/banners/cs2.png" alt="hero">
-                </a>
-              </div>
-
-              <div class="lg:max-w-[272px] w-full">
-                <a href="" class="inline-flex text-green-800 bg-green-200 font-medium text-sm py-1 px-3 rounded-full mb-4">
-                    Tutorial
-                </a>
-                <h2 class="font-semibold text-custom-lg text-dark mb-3">
-                  <a href="blog-single.html">
-                    دوره های آموزشی جدید!<br>
-                    دوره های آموزشی رایگان و غیر رایگان در زمینه های برنامه نویسی , دیتا ساینس و دوآپس در بخش دوره های وبسایت
-                  </a>
-                </h2>
-                <div class="flex items-center gap-2.5 font-mono">
-                  <p class="text-sm">
-                    <a href="">توسط Ermia Codev</a>
-                  </p>
-
-                  <span class="flex w-[3px] h-[3px] rounded-full bg-dark-2"></span>
-
-                  <p class="text-sm">Sep 10, 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<FaLayout
+  title="Ermia Codev"
+  keywrd="Ermia,Codev,ErmiaCodev,Code,Dev,Linux,DevOps,ارمیا,مقدمی"
+>
+  <div
+    class="mt-12 mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0 relative font-fa -z-0"
+  >
+    <div class="my-9">
+      <HeroMain
+        category="personal"
+        title="ارمیا مقدمی (Ermia Codev)"
+        caption=" ارمیا مقدمی هستم برنامه نویش فول استک وب, دیتا ساینتیست, دوآپس و مدرس رسمی فنی حرفه ای "
+      />
     </div>
+    <div class="flex flex-col lg:flex-row gap-x-7.5 gap-y-7">
+      <HeroPost
+        category="tutorial"
+        banner="/img/banners/cs2.png"
+        title="دوره های آموزشی جدید! در زمینه های برنامه نویسی , دیتا ساینس و دوآپس در وبسایت منتشر میشود."
+      />
+      <HeroPost
+        link="https://github.com/ErmiaMoghadamy/Focusizer/releases/"
+        category="tech"
+        banner="/img/banners/fc.png"
+        title="تمرکزیار: برنامه بومی دستیار تمرکز بومی سازی تایمر فارست بهمراه قابلیت های متعدد."
+      />
+    </div>
+  </div>
 </FaLayout>

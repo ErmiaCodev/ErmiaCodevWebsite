@@ -1,0 +1,7 @@
+{
+    "categories": {
+        "tech": { "title": "Technology", "faTitle": "تکنولوژی", "scheme": "text-blue-800 bg-blue-200" },
+        "personal": { "title": "Personal", "faTitle": "شخصی", "scheme": "text-purple-800 bg-purple-200" },
+        "tutorial": { "title": "Tutorial", "faTitle": "آموزش", "scheme": "text-green-800 bg-green-200" }
+    }
+}

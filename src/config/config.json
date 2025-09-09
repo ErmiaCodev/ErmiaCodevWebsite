@@ -5,18 +5,75 @@
         "linkedIn": "",
         "pWebsite": ""
     },
-    "faNavLinks": [
-        { "title": "خانه", "link": "/Fa/" },
-        { "title": "پست ها", "link": "#" },
-        { "title": "دوره ها", "link": "#" },
-        { "title": "درباره من", "link": "#" },
-        { "title": "English", "link": "/" }
-    ],
-    "navLinks": [
-        { "title": "Home", "link": "/" },
-        { "title": "Posts", "link": "#" },
-        { "title": "Courses", "link": "#" },
-        { "title": "About Me", "link": "#" },
-        { "title": "فارسی", "link": "/Fa/" }
-    ]
+    "navLinks": {
+        "en": [
+            {
+                "title": "Home",
+                "link": "/"
+            },
+            {
+                "title": "Posts",
+                "link": "#"
+            },
+            {
+                "title": "Courses",
+                "link": "#"
+            },
+            {
+                "title": "About Me",
+                "link": "#"
+            },
+            {
+                "title": "فارسی",
+                "link": "/Fa/"
+            }
+        ],
+        "fa": [
+            {
+                "title": "خانه",
+                "link": "/Fa/"
+            },
+            {
+                "title": "پست ها",
+                "link": "#"
+            },
+            {
+                "title": "دوره ها",
+                "link": "#"
+            },
+            {
+                "title": "درباره من",
+                "link": "#"
+            },
+            {
+                "title": "English",
+                "link": "/"
+            }
+        ]
+    },
+    "footer": {
+        "fa": {
+            "navs": []
+        },
+        "en": {
+            "navs": [
+                {
+                    "title": "Home",
+                    "link": "#"
+                },
+                {
+                    "title": "Privacy",
+                    "link": "#"
+                },
+                {
+                    "title": "About",
+                    "link": "#"
+                },
+                {
+                    "title": "Contact",
+                    "link": "#"
+                }
+            ]
+        }
+    }
 }

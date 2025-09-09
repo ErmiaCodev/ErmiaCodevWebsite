@@ -1,0 +1,57 @@
+---
+import uiConfig from "../../config/ui.json";
+
+
+interface Props {
+    title: string;
+    caption: string;
+    category: "tech" | "personal" | "tutorial";
+}
+
+const { title, caption, category } = Astro.props;
+
+const cat = uiConfig.categories[category];
+
+
+---
+
+<div
+    class="max-w-full w-full flex flex-col lg:flex-row lg:items-center gap-7 lg:gap-11 bg-white shadow-xs hover:shadow-sm rounded-xl p-4 lg:p-2.5"
+>
+    <div class="lg:max-w-[536px] w-full">
+        <a href="/">
+            <img
+                class="w-full max-h-72 object-cover rounded-xl"
+                src="/img/GeekyChunk.jpg"
+                alt="hero"
+            />
+        </a>
+    </div>
+
+    <div class="lg:max-w-[540px] w-full">
+        <a
+            href=""
+            class={`inline-flex ${cat.scheme} font-medium text-sm py-1 px-3 rounded-full mb-4 `}
+        >
+            {cat.title}
+        </a>
+        <h1 class="font-bold text-custom-4 xl:text-2xl text-dark mb-4">
+            <a href="/">{title}</a>
+        </h1>
+        <p class="max-w-[524px] text-[#5c6a78]">
+            {caption}
+        </p>
+        <div class="flex items-center gap-2 mt-5 font-mono">
+            <a href="author.html" class="flex items-center gap-3">
+                <div class="flex items-center rounded-full overflow-hidden">
+                    <img class="w-12 h-auto" src="/img/Ermia-Moghadamy.png" alt="user" />
+                </div>
+                <p class="text-sm">Ermia Codev</p>
+            </a>
+
+            <span class="flex items-center rounded-full bg-slate-800"></span>
+
+            <p dir="ltr" class="text-sm">Eternity Day,</p>
+        </div>
+    </div>
+</div>
